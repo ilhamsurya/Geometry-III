@@ -17,6 +17,6 @@ public class Line {
     }
 
     public boolean isEqual(Line line1, Line line2) {
-        return true;
+        return line1.x1 == line2.x1;
     }
 }

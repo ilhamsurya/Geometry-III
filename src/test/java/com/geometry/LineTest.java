@@ -2,8 +2,7 @@ package com.geometry;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class LineTest {
     private static final double EPS = 0.0001;
@@ -35,6 +34,13 @@ public class LineTest {
     @Test
     public void shouldReturnTrueWhenLinesIsCompared() {
         Line line1 = new Line(0, 0, 0, 0);
-        assertTrue(line1.isEqual(line1,line1));
+        assertTrue(line1.isEqual(line1, line1));
+    }
+
+    @Test
+    public void shouldReturnFalseWhenXIsDifferent() {
+        Line line1 = new Line(0, 0, 1, 1);
+        Line line2 = new Line(1, 0, 1, 1);
+        assertFalse(line1.isEqual(line1, line2));
     }
 }
