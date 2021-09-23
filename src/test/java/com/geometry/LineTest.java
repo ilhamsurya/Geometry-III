@@ -18,4 +18,10 @@ public class LineTest {
         Line line = new Line(0, 0, 5, 0);
         assertEquals(5, line.length(), EPS);
     }
+
+    @Test
+    public void shouldReturnLengthWhenYIsDifferent() {
+        Line line = new Line(0, 0, 0, 5);
+        assertEquals(5, line.length(), EPS);
+    }
 }
