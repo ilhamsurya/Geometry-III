@@ -3,6 +3,7 @@ package com.geometry;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LineTest {
     private static final double EPS = 0.0001;
@@ -29,5 +30,11 @@ public class LineTest {
     public void shouldReturnLengthWhenPointsAreDifferent() {
         Line line = new Line(0, 0, 3, 4);
         assertEquals(5, line.length(), EPS);
+    }
+
+    @Test
+    public void shouldReturnTrueWhenLinesIsCompared() {
+        Line line1 = new Line(0, 0, 0, 0);
+        assertTrue(line1.isEqual(line1,line1));
     }
 }

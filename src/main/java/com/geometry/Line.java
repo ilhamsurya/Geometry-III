@@ -15,4 +15,8 @@ public class Line {
         int yDistance = this.y1 - this.y2;
         return Math.sqrt(xDistance * xDistance + yDistance * yDistance);
     }
+
+    public boolean isEqual(Line line1, Line line2) {
+        return true;
+    }
 }
