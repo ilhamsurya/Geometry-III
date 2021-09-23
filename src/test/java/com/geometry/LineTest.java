@@ -43,4 +43,11 @@ public class LineTest {
         Line line2 = new Line(1, 0, 1, 1);
         assertFalse(line1.isEqual(line1, line2));
     }
+
+    @Test
+    public void shouldReturnFalseWhenYIsDifferent() {
+        Line line1 = new Line(0, 0, 1, 1);
+        Line line2 = new Line(0, 1, 1, 1);
+        assertFalse(line1.isEqual(line1, line2));
+    }
 }
