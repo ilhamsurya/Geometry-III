@@ -24,4 +24,10 @@ public class LineTest {
         Line line = new Line(0, 0, 0, 5);
         assertEquals(5, line.length(), EPS);
     }
+
+    @Test
+    public void shouldReturnLengthWhenPointsAreDifferent() {
+        Line line = new Line(0, 0, 3, 4);
+        assertEquals(5, line.length(), EPS);
+    }
 }
